@@ -1,28 +1,36 @@
+# *Lab Report 1*
+
 # cd:
 ## Without arguments:
-![Image](Screenshots/cd.png)\
-It returns to the home directory\
-pwd:/home/lecture1/messages
+![Image](Screenshots/cd.png)
+> cd returns to the home directory by default
+
+pwd:/home
 
 ## with a path to a directory:
-![Image](Screenshots/cd_d.png)\
+![Image](Screenshots/cd_d.png)
+> cd changes the current directory to the new directory if a directory is given
+
 pwd:/home/lecture1/messages
 
 ## with a path to a file:
-![Image](Screenshots/cd_f.png)\
+![Image](Screenshots/cd_f.png)
+> cd can only accept a path to a directory, so it won't work if a path to a file is given
+
 pwd:/home/lecture1/messages
 
 # ls:
 ## Without arguments:
-![Image](Screenshots/ls.png)\
+![Image](Screenshots/ls.png)
 pwd:/home/lecture1/messages
 
 ## with a path to a directory:
-![Image](Screenshots/ls_d.png)\
+![Image](Screenshots/ls_arg_path.png)
+
 pwd:/home/lecture1/messages
 
 ## with a path to a file:
-![Image](Screenshots/ls_f.png)\
+![Image](Screenshots/ls_txtlocate.png)\
 pwd:/home/lecture1/messages
 
 # cat:
