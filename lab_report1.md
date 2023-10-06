@@ -17,31 +17,41 @@ pwd:/home/lecture1/messages
 ![Image](Screenshots/cd_f.png)
 > cd can only accept a path to a directory, so it won't work if a path to a file is given
 
-pwd:/home/lecture1/messages
+pwd:/home
 
 # ls:
 ## Without arguments:
 ![Image](Screenshots/ls.png)
-pwd:/home/lecture1/messages
+> ls will list all the elements under the current directory. In this case, the folder under /home is listed by default.
+
+pwd:/home
 
 ## with a path to a directory:
 ![Image](Screenshots/ls_arg_path.png)
+> ls will list all the elements under the current directory. In this case, files under the /messages are listed.
 
-pwd:/home/lecture1/messages
-
+pwd:/home
 ## with a path to a file:
-![Image](Screenshots/ls_txtlocate.png)\
-pwd:/home/lecture1/messages
+![Image](Screenshots/ls_txtlocate.png)
+>In this case, since a path to the file is given. The ls command will display the direct path to the file instead.
+
+pwd:/home
 
 # cat:
 ## Without arguments:
-![Image](Screenshots/cat.png)\
-pwd:/home/lecture1/messages
+![Image](Screenshots/cat.png)
+>The command cat is used to display what's given in the argument. In this case, since nothing is given, it will repeat whatever the user enters.
+ 
+pwd:/home
 
 ## with a path to a directory:
-![Image](Screenshots/cat_d.png)\
-pwd:/home/lecture1/messages
+![Image](Screenshots/cat_d.png)
+>In this case, we passed in a directory as an argument, so it tells the user it's a directory, as expected.
+
+pwd:/home
 
 ## with a path to a file:
-![Image](Screenshots/cat_f.png)\
-pwd:/home/lecture1/messages
+![Image](Screenshots/cat_f.png)
+>In this case, we passed in a path to a file as an argument, so it displays the content of the file.
+
+pwd:/home
