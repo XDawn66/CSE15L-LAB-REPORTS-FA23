@@ -53,14 +53,25 @@ class stringserver {
 } 
 ```
 ## Screenshots of /add-message?s=Hello
-
+![images](lab2screenshots/addm1.png)
 * method called: /add-message
 * Arguments: String(Hello)
 * Things can be changed: if we change the Query of the link(the parts that come after? and before #), the content will be changed.
 For example, the apple message will be added instead if we change the Query to s=apple.
 
+![images](lab2screenshots/addme1.png)
+* method called: /
+* Arguments: none
+* Things can be changed: By default, the method will lead to the homepage. The homepage can be changed after methods are called
+  
 ## Screenshots of /add-message?s=How are you
-
+![images](lab2screenshots/addm2.png)
 * method called: /add-message
 * Arguments: String(How are you)
 * Things can be changed: Again, if we change the Query of the link, the content will be changed.
+  
+![images](lab2screenshots/both.png)
+* method called: /
+* Arguments: none
+* Things can be changed: By default, the method will lead to the homepage. The homepage can be changed after methods are called
+  
