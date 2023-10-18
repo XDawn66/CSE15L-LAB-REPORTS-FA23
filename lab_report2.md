@@ -77,5 +77,9 @@ For example, the apple message will be added instead if we change the Query to s
 
 # Part 2
 * The path to the private and the public key for logging into ieng6:
-  
+![images](lab2shot2/sshpath.png)
+
+* Logging in to the server without the password:
+![images](lab2shot2/interaction.png)
+
 
