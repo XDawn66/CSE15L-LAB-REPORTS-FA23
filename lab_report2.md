@@ -82,4 +82,5 @@ For example, the apple message will be added instead if we change the Query to s
 * Logging in to the server without the password:
 ![images](lab2shot2/interaction.png)
 
-
+# Part 3
+In week 2, I learned how to use ssh to connect and interact with other computers by using ssh. I learned how to make websites with simple functions using Java. In week 3, we went over how to create ssh keys, which is very convenient for logging in remote computer. I was really impressed and felt I made a big step forward in my programming field.
