@@ -62,7 +62,7 @@ For example, the apple message will be added instead if we change the Query to s
 ![images](lab2screenshots/addme1.png)
 * method called: /
 * Arguments: none
-* Things can be changed: By default, the method will lead to the homepage. The homepage can be changed after methods are called
+* Things can be changed: By default, the method will lead to the homepage. The homepage can be changed after methods are called by adding extra content to the URL.
   
 ## Screenshots of /add-message?s=How are you
 ![images](lab2screenshots/addm2.png)
@@ -73,5 +73,8 @@ For example, the apple message will be added instead if we change the Query to s
 ![images](lab2screenshots/both.png)
 * method called: /
 * Arguments: none
-* Things can be changed: By default, the method will lead to the homepage. The homepage can be changed after methods are called
-  
+* Things can be changed: By default, the method will lead to the homepage. The homepage can be changed after methods are called by adding extra content to the URL.
+
+# Part 2
+
+
