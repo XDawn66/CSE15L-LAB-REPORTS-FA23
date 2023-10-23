@@ -76,8 +76,13 @@ For example, the apple message will be added instead if we change the Query to s
 * Things can be changed: By default, the method will lead to the homepage. The homepage can be changed after methods are called by adding extra content to the URL.
 
 # Part 2
-* The path to the private and the public key for logging into ieng6:
-![images](lab2shot2/sshpath.png)
+* The path to the public key for logging into ieng6:
+  
+![images](lab2shot2/newpublic.png)
+
+* The path to the private key for logging into ieng6:
+  
+![images](lab2shot2/newp.png)
 
 * Logging in to the server without the password:
 ![images](lab2shot2/interaction.png)
