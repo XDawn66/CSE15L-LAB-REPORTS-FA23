@@ -48,36 +48,28 @@ class stringserver {
 
 ```
 ## Screenshots of /add-message?s=Hello
-![images](lab2screenshots/addm1.png)
+![images](lab2shot2/hello.png)
 * method called: handleRequest
 * Arguments: URI url
 * Classfiled: index: the order of the message that's added   result: the string that is used to store all the message
 * Things can be changed: Every time calls the method and triggers this query reaction, or adds a message, the parameter array will break the whole given query and see the "=" as the divider. If the query starts with "s=", then the show variable will add a combined string makeup of the index + dot + parameter[1](the message we want to add) + next next line. Next, the index will increase by 1, so everytime we add a string the order matches. Before the call, the result string ="", and the index =1. After the call, the result string = "1. Hello\n\n", and the index = 2.
-
-![images](lab2screenshots/addme1.png)
-* method called: /
-* Arguments: none
-* Things can be changed: By default, the method will lead to the homepage. The homepage can be changed after methods are called by adding extra content to the URL.
   
 ## Screenshots of /add-message?s=How are you
+![images](lab2shot2/how.png)
 * method called: handleRequest
 * Arguments: URI url
 * Classfiled: index: the order of the message that's added   result: the string that is used to store all the message
 * Things can be changed: Every time calls the method and triggers this query reaction, or adds a message, the parameter array will break the whole given query and see the "=" as the divider. If the query starts with "s=", then the show variable will add a combined string makeup of the index + dot + parameter[1](the message we want to add) + next next line. Next, the index will increase by 1, so everytime we add a string the order matches. In this case, we added the message twice. Before the call, the result string ="", and the index = 1. After the first call, the result string = "1. Hello \n\n", and the index = 2. After the second calls, the result string = "1. Hello \n\n 2. How are you\n\n", and the index = 3.
   
-![images](lab2screenshots/both.png)
-* method called: /
-* Arguments: none
-* Things can be changed: By default, the method will lead to the homepage. The homepage can be changed after methods are called by adding extra content to the URL.
 
 # Part 2
 * The path to the public key for logging into ieng6:
   
-![images](lab2shot2/newpublic.png)
+![images](lab2shot2/p2.png)
 
 * The path to the private key for logging into ieng6:
   
-![images](lab2shot2/newp.png)
+![images](lab2shot2/newpublic.png)
 
 * Logging in to the server without the password:
 ![images](lab2shot2/interaction.png)
