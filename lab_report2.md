@@ -7,30 +7,23 @@ import java.io.*;
 import java.util.*;
 
 class Handler implements URLHandler {
-    // The one bit of state on the server: a number that will be manipulated by
-    // various requests.
-    Vector<String> database = new Vector<String>();
-    String result = "Search result:";
+
+    String result ="";
     int index = 1;
-    
+
+
     public String handleRequest(URI url) {
-        String show ="";
         if (url.getPath().equals("/")) {
-            for(int i = 0; i < database.size();i++)
-            {
-                show += index+". ";
-                show += database.get(i) +"\n";
-                index++;
-            }
-            return String.format(show);
+            return String.format(result);
         } 
          else 
          {
             if (url.getPath().contains("/add-message")) {
                 String[] parameters = url.getQuery().split("=");
                 if (parameters[0].equals("s")) {
-                   database.add(parameters[1]);
-                   return String.format("Message added!");
+                   result += index + ". " + parameters[1] + "\n\n";
+                   index++;
+                   return String.format(result);
                 }
             }
              return "404 Not Found!";
@@ -50,14 +43,16 @@ class stringserver {
 
         Server.start(port, new Handler());
     }
-} 
+}
+
+
 ```
 ## Screenshots of /add-message?s=Hello
 ![images](lab2screenshots/addm1.png)
-* method called: /add-message
-* Arguments: String(Hello)
-* Things can be changed: if we change the Query of the link(the parts that come after? and before #), the content will be changed.
-For example, the apple message will be added instead if we change the Query to s=apple.
+* method called: handleRequest
+* Arguments: URI url
+* Classfiled: index: the order of the message that's added   result: the string that is used to store all the message
+* Things can be changed: Every time calls the method and triggers this query reaction, or adds a message, the parameter array will break the whole given query and see the "=" as the divider. If the query starts with "s=", then the show variable will add a combined string makeup of the index + dot + parameter[1](the message we want to add) + next next line. Next, the index will increase by 1, so everytime we add a string the order matches. Before the call, the result string ="", and the index =1. After the call, the result string = "1. Hello\n\n", and the index = 2.
 
 ![images](lab2screenshots/addme1.png)
 * method called: /
@@ -65,10 +60,10 @@ For example, the apple message will be added instead if we change the Query to s
 * Things can be changed: By default, the method will lead to the homepage. The homepage can be changed after methods are called by adding extra content to the URL.
   
 ## Screenshots of /add-message?s=How are you
-![images](lab2screenshots/addm2.png)
-* method called: /add-message
-* Arguments: String(How are you)
-* Things can be changed: Again, if we change the Query of the link, the content will be changed.
+* method called: handleRequest
+* Arguments: URI url
+* Classfiled: index: the order of the message that's added   result: the string that is used to store all the message
+* Things can be changed: Every time calls the method and triggers this query reaction, or adds a message, the parameter array will break the whole given query and see the "=" as the divider. If the query starts with "s=", then the show variable will add a combined string makeup of the index + dot + parameter[1](the message we want to add) + next next line. Next, the index will increase by 1, so everytime we add a string the order matches. In this case, we added the message twice. Before the call, the result string ="", and the index = 1. After the first call, the result string = "1. Hello \n\n", and the index = 2. After the second calls, the result string = "1. Hello \n\n 2. How are you\n\n", and the index = 3.
   
 ![images](lab2screenshots/both.png)
 * method called: /
