@@ -49,11 +49,41 @@ public void testReverseInPlace() {
 I choose to explore the usage of the grep command, and all info is from https://www.geeksforgeeks.org/grep-command-in-unixlinux/
 
 ## 1. grep -c  (it will list the number of the matching content)
-* Example 1: list out the number of lines that has ".txt"
+* Example 1: list out the number of lines that have ".txt" in the file.txt file
+  
+![image]()
 
-*Example 2: list out the number of lines that has "void", or count how many void functions in that java code
+![image]()
 
+* Example 2: list out the number of lines that have "void", or for our purpose, count how many void functions in that Java code
+  
+![image]()
+
+![image]()
 
 Without the -c, the grep will show all the matching lines in the file.txt file. However, when we want to know how many lines ".txt" is in a very long file, we wouldn't like to count how many lines in the command prompt. Instead, adding a -c in the grep command just tells you how many lines are matching right away. It's more useful when we try to count some patterns in a long text file. 
+
+## 2. grep -l  (it will list the filename of the matching content)
+* Example 1: list out all the filename of files that have a pattern "for" under the lab3 directory
+  
+![image]()
+
+* Example 2: list out the filename of files that have a pattern "main", or for our purpose, count how many Java programs have the main class under the lab3 directory
+
+![image]()
+
+The additional -l will list out the filename for files that have the matching content, it's useful if we try to find a certain program or text file but we only remember some keywords.
+
+## 3. grep -w  (it will list lines that exactly match the whole word)
+* Example 1: list out the names of files that have the whole word "for" under ArrayExamples.java
+  
+![image]()
+
+* Example 2: list out the names of files that have the whole word "fo" under ArrayExamples.java
+  
+![image]()
+
+The additional -w will list out the lines that have the exact matching content, it's useful if we try to find lines that have the exact keyword from a large amount of files.
+
 
 
