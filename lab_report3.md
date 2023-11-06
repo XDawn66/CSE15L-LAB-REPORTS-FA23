@@ -85,5 +85,14 @@ The additional -l will list out the filename for files that have the matching co
 
 The additional -w will list out the lines that have the exact matching content, it's useful if we try to find lines that have the exact keyword from a large amount of files.
 
+## 4. grep -v  (it will list lines that do not match the pattern)
+* Example 1: list out the number of lines that don't have "txt" in the file.txt file
+  
+![image]()
 
+* Example 2: list out the number of lines that don't have "java" in the file.txt file
+  
+![image]()
+
+The additional -v will list out the lines that do not have the matching content, it's useful if we try to filter out certain information that we don't want to see from files.
 
