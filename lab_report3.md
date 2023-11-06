@@ -18,7 +18,7 @@ public void testReverseInPlace() {
 }
 ```
 ## The symptom
-![image]()
+![image](Lab_report3/symptom.png)
 
 ## The bug
 ### before fixed
@@ -51,48 +51,48 @@ I choose to explore the usage of the grep command, and all info is from https://
 ## 1. grep -c  (it will list the number of the matching content)
 * Example 1: list out the number of lines that have ".txt" in the file.txt file
   
-![image]()
+![image](Lab_report3/g1.png)
 
-![image]()
+![image](Lab_report3/g1e.png)
 
-* Example 2: list out the number of lines that have "void", or for our purpose, count how many void functions in that Java code
+* Example 2: list out the number of lines that have "void", or for our purpose, counting how many void functions in that Java code
   
-![image]()
+![image](Lab_report3/g2.png)
 
-![image]()
+![image](Lab_report3/g2e.png)
 
 Without the -c, the grep will show all the matching lines in the file.txt file. However, when we want to know how many lines ".txt" is in a very long file, we wouldn't like to count how many lines in the command prompt. Instead, adding a -c in the grep command just tells you how many lines are matching right away. It's more useful when we try to count some patterns in a long text file. 
 
 ## 2. grep -l  (it will list the filename of the matching content)
-* Example 1: list out all the filename of files that have a pattern "for" under the lab3 directory
+* Example 1: list out all the filename of files that have a pattern "for" under the lab3 directory, and directories themselves will not be checked
   
-![image]()
+![image](Lab_report3/l1.png)
 
 * Example 2: list out the filename of files that have a pattern "main", or for our purpose, count how many Java programs have the main class under the lab3 directory
 
-![image]()
+![image](Lab_report3/l2.png)
 
 The additional -l will list out the filename for files that have the matching content, it's useful if we try to find a certain program or text file but we only remember some keywords.
 
 ## 3. grep -w  (it will list lines that exactly match the whole word)
 * Example 1: list out the names of files that have the whole word "for" under ArrayExamples.java
   
-![image]()
+![image](Lab_report3/gw1.png)
 
 * Example 2: list out the names of files that have the whole word "fo" under ArrayExamples.java
   
-![image]()
+![image](Lab_report3/gw2.png)
 
 The additional -w will list out the lines that have the exact matching content, it's useful if we try to find lines that have the exact keyword from a large amount of files.
 
 ## 4. grep -v  (it will list lines that do not match the pattern)
 * Example 1: list out the number of lines that don't have "txt" in the file.txt file
   
-![image]()
+![image](Lab_report3/gv1.png)
 
 * Example 2: list out the number of lines that don't have "java" in the file.txt file
   
-![image]()
+![image](Lab_report3/gv2.png)
 
 The additional -v will list out the lines that do not have the matching content, it's useful if we try to filter out certain information that we don't want to see from files.
 
