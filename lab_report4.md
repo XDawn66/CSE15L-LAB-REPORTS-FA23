@@ -31,8 +31,8 @@ I open the buggy program with the vim command, and then I jump to line 44, where
 I run the test program again with bash + filename command.
 
 ## Step 9:
-![image](lab4/9.png)
+![image](lab4/8.png)
 - Key Pressed: git add ListExamples.java git commit i x \<esc> :wq
 
-I add the changes to my commit by typing git add + filename, and then I try to do a github commit to my github by typing git commit. Then I enter the vim mode to provide a commit message. Therefore, I press i to get into the insertion mode, type my message "x", quit the insert mode with esc, and save the message and quit the vim mode with :wq. Then, the commit is finished and my file in GitHub repository are updated.
+I add the changes to my commit by typing git add + filename, and then I try to do a github commit to my github by typing git commit. Then I enter the vim mode to provide a commit message. Therefore, I press i to get into the insertion mode, type my message "kk", quit the insert mode with esc, and save the message and quit the vim mode with :wq. Then, the commit is finished and my file in GitHub repository are updated.
   
