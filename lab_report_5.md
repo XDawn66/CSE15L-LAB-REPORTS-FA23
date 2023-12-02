@@ -67,6 +67,8 @@ The error:
 
 ![img](lab5/sym3.png)
 
+![img](lab5/err.png)
+
 **Comment** 
 
 # 1 Answer
