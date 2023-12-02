@@ -4,7 +4,7 @@
 ### StudentA
 ##### 1d ago in **General**
 
-Hello, I'am trying to add a message to my webserver by using the add-message in my headleRequest function. If the url includes a path with "add-message" and a query starting with s and followed by = +"message". However, no matter how I tried, I could not add messages and nothing was added to the homepage. The homepage is supposed to show a list a messages that I added! I believe I did everything correctly, but for some reason, it could not work out! Can you guys take a look and help?
+Hello, I'am trying to add a message to my webserver by using the add-message in my headleRequest function. If the url includes a path with "add-message" and a query starting with s and followed by = +"message", a message will be added to the server and show up on the homepage However, no matter how I tried, I could not add messages and nothing was on the homepage. I believe I did everything correctly, but for some reason, it could not work out! Can you guys take a look and help?
 
 My code:
 ```
@@ -57,14 +57,15 @@ The bash file code:
 javac stringserver.java Server.java
 java stringserver 4000
 ```
+File structure:
+
+![img](lab5/file.png)
 
 The error:
 
-![img]()
+![img](lab5/sym2.png)
 
-![img]()
-
-![img]()
+![img](lab5/sym3.png)
 
 **Comment** 
 
@@ -136,11 +137,11 @@ class stringserver {
 
 The output after fixing :
 
-![img]()
+![img](lab5/fix.png)
 
-![img]()
+![img](lab5/fix2.png)
 
-![img]()
+![img](lab5/fix3.png)
 
 # Part 2
 Something I learned very useful is to how to use cd, ls, cat, echo, and grep those basic Linux commands to manipulate the terminal since those are the most basic skills that I need when I become a software engineer in the future. The second cool thing is to learn the structure of url and how to write a program to build my server, this allows me to make my own little website purely using java with cool functionalities which is impressive and interesting. Lastly, I found out the debugger is also very helpful when I write more complex programs in the future since debugging is always painful and time-consuming. With the jdb, I get a handy tool to tell me which lines is triggering the error and what happen to my variables when the code run certain line. Overall, CSE 15L lectures and labs are very useful  for my future career.
