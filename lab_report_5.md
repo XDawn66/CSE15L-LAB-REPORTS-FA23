@@ -1,52 +1,68 @@
-# Question about my printing code #99
+# Part1
+## Question about my printing code #99
 
 ### StudentA
 ##### 1d ago in **General**
 
-Hello, I'am confused on getting the compiling error for my program. 
-Did I compile it wrong or I need to make the function static in order to make it work? Can you guys take a look?
-Thanks!
+Hello, I'am trying to add a message to my webserver by using the add-message in my headleRequest function. If the url includes a path with "add-message" and a query starting with s and followed by = +"message". However, no matter how I tried, I could not add messages and nothing was added to the homepage. The homepage is supposed to show a list a messages that I added! I believe I did everything correctly, but for some reason, it could not work out! Can you guys take a look and help?
 
 My code:
 ```
+import java.io.IOException;
+import java.net.URI;
+import java.io.*;
 import java.util.*;
 
-public void print_even(int[] arr)
-{
-    int len = arr.length;
-    for(int i = 0; i < len; i++)
-    {
-        if(i % 2 == 0)
-        {
-            System.out.println("arr: "+arr[i]);
-        }
+class Handler implements URLHandler {
+
+    String result ="";
+    int index = 1;
+
+
+    public String handleRequest(URI url) {
+        if (url.getPath().equals("/")) {
+            return String.format(result);
+        } 
+         else 
+         {
+            if (url.getPath().contains("/add-message")) {
+                String[] parameters = url.getQuery().split("=");
+                if (parameters[0].equals(" s")) {
+                   result += index + ". " + parameters[1] + "\n\n";
+                   index++;
+                   return String.format(result);
+                }
+            }
+             return "404 Not Found!";
+         } 
+        
     }
 }
 
-public class Main
-{
-	public static void main(String[] args) {
-        int [] a = new int [20];
-		for (int i = 0; i < 20; i++) //initializing the array
-        {
-            a[i] = i;
+class stringserver {
+    public static void main(String[] args) throws IOException {
+        if(args.length == 0){
+            System.out.println("Missing port number! Try any number between 1024 to 49151");
+            return;
         }
-        print_even(a);
-	}
-}
 
+        int port = Integer.parseInt(args[0]);
+
+        Server.start(port, new Handler());
+    }
+}
 ```
 The bash file code:
 ```
-javac Code.java
-java Code > data.txt
+javac stringserver.java Server.java
+java stringserver 4000
 ```
 
-The data.txt:
-```
-```
+The error:
 
-The error message:
+![img]()
+
+![img]()
 
 ![img]()
 
@@ -56,15 +72,18 @@ The error message:
 ### JoJo ***STAFF***
 #### 1h ago
 
-- First, your function is not running because the class with the name Code could not be found in the working directory. You will want to do some modification in your program in order to make the code matches the class name that you are trying to complie. 
-- Second, in Java, you need to declare a function inside a class, and if you define a function in the main class, the function must be static. Otherwise, the program will not run properly.
+- Yes you are right, most of your code is working fine and the logic is making sense. However, be super careful when you are using string variables and passing them into functions or as an argument. Your string has to be 100 percent correct and with no extra characters like space or . or _. Try to check all the strings you have created so far and make sure they are exactly what you are expected.
   
 Hopefully that helps! :D
 
 **Comment** 
 
  ##### StudentA
- Based on what you said, I changed the name of my class inside the program and made it the same as my program name, and it works! Just like you said, if I don't put my function into a class, the program indeed produces an error about the unnamed class. I moved that into the main class and tried to make the function static, and my program works now. The bugs for the 
+ Based on what you said, I checked all the strings in my program. I just found out I accidentally typed an extra space on line 20. 
+```
+if (parameters[0].equals(" s")) {
+```
+ It should be "s" instead of " s", and my program works after fixing that! I do need to be super careful next time when I deal with strings since any mistake in the string content can run the whole program, just like solving math! Thanks for the help!
 
 Correct code:
 ```
@@ -115,6 +134,13 @@ class stringserver {
 
 ```
 
+The output after fixing :
 
+![img]()
 
+![img]()
 
+![img]()
+
+# Part 2
+Something I learned very useful is to how to use cd, ls, cat, echo, and grep those basic Linux commands to manipulate the terminal since those are the most basic skills that I need when I become a software engineer in the future. The second cool thing is to learn the structure of url and how to write a program to build my server, this allows me to make my own little website purely using java with cool functionalities which is impressive and interesting. Lastly, I found out the debugger is also very helpful when I write more complex programs in the future since debugging is always painful and time-consuming. With the jdb, I get a handy tool to tell me which lines is triggering the error and what happen to my variables when the code run certain line. Overall, CSE 15L lectures and labs are very useful  for my future career.
